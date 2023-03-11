@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Edit Profile</title>
+        <link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<h1>EDIT PROFILE</h1>
+		<form action="/home/sitters/<%=profile.id%>?_method=PUT" method="POST">
+            <label for="image">Image Link</label><br><br>
+            <input type="text" name="image" id="image" value="<%=profile.image%>"><br><br>
+            <label for="name">Name</label><br><br>
+            <input type="text" name="name" id="name" value="<%=profile.name%>"><br><br>
+            <label for="age">Age</label><br><br>
+            <input type="text" name="age" id="age" value="<%=profile.age%>"><br><br>
+            <label for="location">Location</label><br><br>
+            <input type="text" name="location" id="location" value="<%=profile.location%>"/><br><br>
+            <label for="education">Education</label><br><br>
+            <input type="text" name="education" id="education" value="<%=profile.education%>"/><br><br>
+            <label for="experience">Experience</label><br><br>
+            <input type="number" name="experience" id="experience" value="<%=profile.experience%>"/><br><br>
+            <label for="desiredSalary">Desired Salary</label><br><br>
+            <input type="number" name="desiredSalary" id="desiredSalary" value="<%=profile.desiredSalary%>"/><br><br>
+            <label for="haveCar">Have a Car</label><br><br>
+            <input type="checkbox" name="haveCar" value="<%=profile.haveCar%>"
+            <% if(profile.haveCar) {%>
+                checked
+            <%}%>
+            /><br /><br>
+            <label for="phoneNumber">Phone Number</label><br><br>
+            <input type="text" name="phoneNumber" id="phoneNumber" value="<%=profile.phoneNumber%>"/><br><br>
+            <label for="email">Email</label><br><br>
+            <input type="email" name="email" id="email" value="<%=profile.email%>"/><br><br>
+			<input type="submit" name="" value="Edit Profile"/>
+            <button><a href="/home">BACK</a></button>
+		</form>
+	</body>
+	</body>
+</html>

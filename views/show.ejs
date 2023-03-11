@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROFILE/title>
+    <title>PROFILE</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -15,15 +15,20 @@
     <h3>EDUCATION: <%=profile.education%></h3>
     <h3>EXPERIENCE: <%=profile.experience%></h3>
     <h3>DESIRED SALARY: <%=profile.desiredSalary%></h3>
-    <h3>HAVE A CAR?: <%=profile.haveCar%></h3>
-    <h3>ABOUT YOURSELF <%=profile.aboutYourself%></h3>
+    <h3>HAVE A CAR?: 
+        <% if(profile.haveCar === true){ %>
+            Yes
+        <% } else { %>
+            No
+        <% } %> </h3>
+    <h4>ABOUT YOURSELF <%=profile.aboutYourself%></h4>
     <h3>PHONE: <%=profile.phoneNumber%></h3>
     <h3>EMAIL: <%=profile.email%></h3>
-    
+    <button><a href="/home/sitters/<%=profile.id%>/edit">EDIT</a></button><br><br>
     <form action="/home/sitters/<%=profile.id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
     </form><br>
-    <a href="/home/sitters/<%=profile.id%>/edit">EDIT</a><br><br>
-    <a href="/home/sitters">BACK</a>
+
+    <button><a href="/home/sitters">BACK</a></button>
 </body>
 </html>

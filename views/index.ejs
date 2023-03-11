@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-
     <h1>NANNY PROFILES</h1>
     <div class="container"></div>
     <% for(let i=0; i < profile.length; i++) { %>
@@ -16,15 +15,9 @@
             <img src="<%=profile[i].image%>">
             <h1><%=profile[i].name%></h1></a>
             <h3>AGE: <%=profile[i].age%></h3>
-            <h3>LOCATION: <%=profile[i].location%></h3>
-            <h3>EDUCATION: <%=profile[i].education%></h3>
-            <h3>EXPERIENCE: <%=profile[i].experience%></h3>
-            <h3>DESIRED SALARY: <%=profile[i].desiredSalary%></h3>
-            <h3>HAVE A CAR?: <%=profile[i].haveCar%></h3>
-            <h4>ABOUT YOURSELF: <%=profile[i].aboutYourself%></h3>
-            <h3>PHONE: <%=profile[i].phoneNumber%></h3>
-            <h3>EMAIL: <%=profile[i].email%></h3>
+            <h3><%=profile[i].location%></h3>
     <% } %>
-</div> 
+    </div>
+    <button><a href="/home">BACK</a></button>
 </body>
 </html>

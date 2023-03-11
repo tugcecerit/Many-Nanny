@@ -8,7 +8,7 @@ const profileSchema = new mongoose.Schema({
     education: {type: String, required: true},
     experience: {type: Number, required: true},
     desiredSalary: {type: Number, required: true},
-    haveCar: Boolean,
+    haveCar: {type: Boolean, default: false},
     aboutYourself: String,
     phoneNumber: {type: Number, required: true, unique: true},
     email: {type: String, required: true, lowercase: true, unique: true}
@@ -16,4 +16,4 @@ const profileSchema = new mongoose.Schema({
 
 const Profile = mongoose.model('Profile', profileSchema)
 
-module.exports = Profile;
+module.exports = Profile

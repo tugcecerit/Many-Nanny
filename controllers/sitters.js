@@ -25,15 +25,11 @@ router.get('/sitters', (req, res) => {
     })
 })
 
-router.post('/sitters', (req, res) => {
-    Profile.create(req.body, (err, createdProfiles) => {
-    res.redirect('/home/sitters/' + createdProfiles.id);
-    });
-})
 
 router.get('/sitters/new', (req, res) => {
     res.render('new.ejs')
 })
+
 
 router.get('/sitters/seed', async (req, res) => {
     const newProfiles =
@@ -109,7 +105,18 @@ router.get('/sitters/seed', async (req, res) => {
       }
     })
 
-
+router.post('/sitters', (req, res) => {
+    const haveCar = req.body.haveCar === 'on';
+    const profileData = {...req.body, haveCar};
+    Profile.create(profileData, (err, createdProfile) => {
+        if (err) {
+            console.log(err);
+            res.send(err);
+        }
+        console.log(createdProfile);
+        res.redirect('/home/sitters');
+    });
+});
 
 router.get('/sitters/:id', (req, res) => {
     Profile.findById(req.params.id, (err, foundProfile)=>{
@@ -119,5 +126,48 @@ router.get('/sitters/:id', (req, res) => {
     });
 })
 
+router.delete('/sitters/:id', (req, res) => {
+    Profile.findByIdAndDelete(req.params.id, (err, deletedProfile) => {
+        if(err) {
+            console.log(err)
+            res.send(err)
+        } else {
+            console.log(deletedProfile)
+            res.redirect('/home/sitters')
+        }
+    })
+})
+
+router.get('/sitters/:id/edit', (req, res)=>{
+    Profile.findById(req.params.id, (err, foundProfile) => {
+		if(err) {
+			console.log(err)
+			res.send(err)
+		} else {
+            res.render('edit.ejs', {
+			profile: foundProfile
+			})
+		}
+	})
+})
+
+router.put('/sitters/:id', (req, res) => {
+    if(req.body.haveCar === 'on') {
+        req.body.haveCar = true
+    } else {
+        req.body.haveCar = false
+    }
+	Profile.findByIdAndUpdate(req.params.id, req.body, {new:true},
+        (err, updatedProfile) => {
+            if (err) {
+                console.log(err)
+                res.send(err)
+            } else {
+                console.log(updatedProfile)
+                res.redirect('/home/sitters/'+req.params.id)
+            }
+        }
+    )
+})
 
 module.exports = router
