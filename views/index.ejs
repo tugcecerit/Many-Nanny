@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROFILES</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <h1>NANNY PROFILES</h1>
+    <div class="container"></div>
+    <% for(let i=0; i < profile.length; i++) { %>
+        <a href="/home/sitters/<%=profile[i].id%>">
+            <img src="<%=profile[i].image%>">
+            <h1><%=profile[i].name%></h1></a>
+            <h3>AGE: <%=profile[i].age%></h3>
+            <h3>LOCATION: <%=profile[i].location%></h3>
+            <h3>EDUCATION: <%=profile[i].education%></h3>
+            <h3>EXPERIENCE: <%=profile[i].experience%></h3>
+            <h3>DESIRED SALARY: <%=profile[i].desiredSalary%></h3>
+            <h3>HAVE A CAR?: <%=profile[i].haveCar%></h3>
+            <h4>ABOUT YOURSELF: <%=profile[i].aboutYourself%></h3>
+            <h3>PHONE: <%=profile[i].phoneNumber%></h3>
+            <h3>EMAIL: <%=profile[i].email%></h3>
+    <% } %>
+</div> 
+</body>
+</html>
