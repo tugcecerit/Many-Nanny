@@ -15,6 +15,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+      
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
@@ -47,6 +48,13 @@
     <h4>ABOUT YOURSELF <%=profile.aboutYourself%></h4>
     <h3>PHONE: <%=profile.phoneNumber%></h3>
     <h3>EMAIL: <%=profile.email%></h3>
+    <button class="back"><a class="aBack" href="/home/sitters/<%=profile.id%>/edit">EDIT</a></button><br><br>
+    <form action="/home/sitters/<%=profile.id%>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE"/>
+    </form><br>
+    <form action="/users/signout" method="POST">
+        <button class="back" type="submit">LOG OUT</button>
+    </form><br>
     <button class="back"><a class="aBack" href="/home/sitters">BACK</a></button>
 </body>
 <footer>

@@ -2,6 +2,16 @@ const express = require('express')
 const router = express.Router()
 const Profile = require('../models/sitters.js')
 
+
+const authRequired = (req, res, next) => {
+    console.log(req.session.currentUser)
+    if(req.session.currentUser) {
+        next()
+    } else {
+        res.send('You must be logged in to do that!')
+    }
+}
+
 router.get('/', (req, res) => {
     Profile.find({}, (err, foundProfiles) => {
         if (err) {
@@ -25,6 +35,17 @@ router.get('/sitters', (req, res) => {
     })
 })
 
+router.get('/sitters/aboutus', (req, res) => {
+    res.render('about.ejs')
+})
+
+router.get('/sitters/contactus', (req, res) => {
+    res.render('contact.ejs')
+})
+
+router.get('/sitters/contactus/done', (req, res) => {
+    res.send('Your message has been submitted!')
+})
 
 router.get('/sitters/new', (req, res) => {
     res.render('new.ejs')
@@ -108,15 +129,17 @@ router.get('/sitters/seed', async (req, res) => {
 router.post('/sitters', (req, res) => {
     const haveCar = req.body.haveCar === 'on';
     const profileData = {...req.body, haveCar};
+    console.log(req.session)
     Profile.create(profileData, (err, createdProfile) => {
         if (err) {
             console.log(err);
             res.send(err);
         }
         console.log(createdProfile);
-        res.redirect('/home/sitters');
+        res.redirect('/home/sitters/profile/' + createdProfile.id);
     });
 });
+
 
 router.get('/sitters/:id', (req, res) => {
     Profile.findById(req.params.id, (err, foundProfile)=>{
@@ -125,6 +148,17 @@ router.get('/sitters/:id', (req, res) => {
         });
     });
 })
+
+router.get('/sitters/profile/:id', (req, res) => {
+    console.log(req.params.id);
+    Profile.findById(req.params.id, (err, foundProfile)=>{
+        console.log(foundProfile)
+        res.render('profile.ejs', {
+            profile: foundProfile
+        });
+    });
+})
+
 
 router.delete('/sitters/:id', (req, res) => {
     Profile.findByIdAndDelete(req.params.id, (err, deletedProfile) => {
@@ -164,7 +198,7 @@ router.put('/sitters/:id', (req, res) => {
                 res.send(err)
             } else {
                 console.log(updatedProfile)
-                res.redirect('/home/sitters/'+req.params.id)
+                res.redirect('/home/sitters/profile/'+req.params.id)
             }
         }
     )

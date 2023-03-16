@@ -1,18 +1,31 @@
 require("dotenv").config()
 const express = require('express')
 const app = express()
+const methodOverride = require('method-override')
 const mongoose = require('mongoose')
+const PORT = process.env.PORT || 3000
 const Profile = require('./models/sitters.js')
 const profilesController = require('./controllers/sitters.js')
-const PORT = process.env.PORT || 3000
+const session = require('express-session')
+const usersController = require('./controllers/users.js')
 const mongoURI = 'mongodb://localhost:27017/sitters'
-const methodOverride = require('method-override')
+
+const SESSION_SECRET = process.env.SESSION_SECRET
+console.log('Here is the session secret')
+console.log(SESSION_SECRET)
+app.use(session({
+    secret: SESSION_SECRET, 
+    resave: false,
+    saveUninitialized: false
+}))
 
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+app.set('view engine', 'ejs');
 app.use('/home', profilesController)
+app.use('/users', usersController)
 
 mongoose.connect(process.env.DATABASE_URL)
 

@@ -6,8 +6,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Edit Profile</title>
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Fjalla+One&family=Londrina+Shadow&family=Poiret+One&family=Poller+One&family=Rubik+Gemstones&family=Shadows+Into+Light&display=swap" rel="stylesheet">
 	</head>
 	<body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/home"><img id="logo" src="/images/logo2.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/home/sitters/aboutus">About Us <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/home/sitters">Nanny Profiles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="/home/sitters/contactus">Contact Us</a>
+                  </li>
+              </ul>
+                <button class="back" type="submit"><a class="aBack" href="/users/signin">LOG IN</a></button>
+                <button class="back" type="submit"><a class="aBack" href="/users/register">SIGN UP</a></button>
+            </div>
+          </nav>
 		<h1>EDIT PROFILE</h1>
 		<form action="/home/sitters/<%=profile.id%>?_method=PUT" method="POST">
             <label for="image">Image Link</label><br><br>
@@ -35,8 +59,10 @@
             <label for="email">Email</label><br><br>
             <input type="email" name="email" id="email" value="<%=profile.email%>"/><br><br>
 			<input type="submit" name="" value="Edit Profile"/>
-            <button><a href="/home">BACK</a></button>
+            <button class="back"><a class="aBack" href="/home">BACK</a></button>
 		</form>
 	</body>
-	</body>
+    <footer>
+        <p>&copy; 2023 Many Nanny Company. All rights reserved.</p>
+    </footer>
 </html>
