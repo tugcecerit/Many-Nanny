@@ -56,7 +56,7 @@ router.get('/sitters/seed', async (req, res) => {
     const newProfiles =
       [
         {
-        image: 'https://img.freepik.com/free-photo/happiness-wellbeing-confidence-concept-cheerful-attractive-african-american-woman-curly-haircut-cross-arms-chest-self-assured-powerful-pose-smiling-determined-wear-yellow-sweater_176420-35063.jpg?w=1060&t=st=1678418441~exp=1678419041~hmac=62d73816339b358805687288e0ba8e64f290947bbea1eb8a07fc220a4f98290c',
+        image: url('https://img.freepik.com/free-photo/happiness-wellbeing-confidence-concept-cheerful-attractive-african-american-woman-curly-haircut-cross-arms-chest-self-assured-powerful-pose-smiling-determined-wear-yellow-sweater_176420-35063.jpg?w=1060&t=st=1678418441~exp=1678419041~hmac=62d73816339b358805687288e0ba8e64f290947bbea1eb8a07fc220a4f98290c'),
         name: 'Jessica Bold',
         age: 24,
         location: 'Wallington, NJ',
