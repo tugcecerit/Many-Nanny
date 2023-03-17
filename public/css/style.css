@@ -15,7 +15,7 @@ body {
 #freepik_stories-baby, #freepik_stories-baby-shoes {
     width: 700px;
     position: absolute;
-    right: 200px;
+    right: 300px;
     top: 200px;
 }
 
@@ -178,6 +178,16 @@ input[type=text], input[type=number], input[type=email], input[type=password], s
     left: 150px;
   }
 
+  .create-edit {
+    position: absolute;
+    left: 400px;
+  }
+
+  .welcome-edit {
+    font-family: 'Caveat', cursive;
+    padding: 20px 0;
+  }
+
   #contactus {
     position: relative;
     left: 1100px;
@@ -239,6 +249,24 @@ footer {
     margin: 20px 70px;
   }
 
+  #profile-img-index {
+    position: relative;
+    left: 240px;
+    width: 650px;
+    border: 5px solid rgba(0,0,0,.3);
+    border-radius: 50%;
+  }
+
+  #profile-p {
+    font-size: 20px;
+    margin: 10px 210px;
+  }
+
+  #profile-a:hover {
+    text-decoration: none;
+    color: #3C5059;
+  }
+
   #profile-name {
     font-size: 40px;
     text-decoration: none;
@@ -260,6 +288,46 @@ footer {
     text-decoration: none;
     margin: 20px 500px;
   }
+
+  .profile-h1 {
+    font-family: 'Caveat', cursive;
+    width: 700px;
+    font-size: 40px;
+    font-weight: bold;
+    color:#3C5059;
+    margin: 20px 200px;
+  }
+
+  .profile-h3 {
+    font-family: 'Caveat', cursive;
+    width: 600px;
+    font-size: 26px;
+    color:#3C5059;
+    margin: 20px 200px;
+  }
+
+  .profile-img {
+    position: relative;
+    left: 200px;
+    width: 600px;
+    border: 5px solid rgba(0,0,0,.3);
+    border-radius: 20px;
+    margin: 20px;
+  }
+
+  .show-button, .show-input input[type="submit"] {
+    padding: 15px 40px;
+    margin: 10px 200px;
+    background: linear-gradient(145deg, white, #F2A7C3);
+    font-size: 1rem;
+    border: 0;
+    border-radius: 30px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.5);
+    box-shadow: inset 0 -2px 10px rgba(0,0,0,.3),
+    0 2px 5px rgba(0,0,0,.3);
+    cursor: pointer;
+}
 
   .top-profile {
     margin: 50px 290px;
@@ -289,14 +357,14 @@ footer {
         top: 130px;
     }
     
-    #freepik_stories-sleeping-baby, #freepik_stories-kids-playing-with-dolls, #freepik_stories-baby-shoes {
+    #freepik_stories-sleeping-baby, #freepik_stories-kids-playing-with-dolls {
         width: 500px;
         position: absolute;
         right: 50px;
         top: 150px;
     }
 
-    #freepik_stories-teddy-bear, #freepik_stories-baby {
+    #freepik_stories-teddy-bear, #freepik_stories-baby, #freepik_stories-baby-shoes {
         width: 500px;
         position: fixed;
         right: 120px;
@@ -360,6 +428,11 @@ footer {
     .welcome {
         font-family: 'Caveat', cursive;
         padding: 0 0;
+    }
+
+    .welcome-edit {
+        font-family: 'Caveat', cursive;
+        padding: 20px 0;
     }
     
     .top {
@@ -577,22 +650,46 @@ footer {
         font-size: 40px;
         font-weight: bold;
         color:#3C5059;
-        margin: 20px 500px;
+        margin: 20px 180px;
       }
 
       .profile-h3 {
         font-family: 'Caveat', cursive;
-        width: 700px;
-        font-size: 30px;
+        width: 600px;
+        font-size: 26px;
         color:#3C5059;
-        margin: 20px 160px;
+        margin: 20px 180px;
       }
 
       .profile-img {
         position: relative;
-        left: 420px;
+        left: 160px;
         width: 500px;
-        border-radius: 50%;
+        border: 5px solid rgba(0,0,0,.3);
+        border-radius: 20px;
         margin: 20px;
     }
+
+    #profile-img-index {
+        position: relative;
+        left: 200px;
+        width: 400px;
+        border: 5px solid rgba(0,0,0,.3);
+        border-radius: 50%;
+    }
+    
+    .show-button, .show-input input[type="submit"] {
+        padding: 15px 40px;
+        margin: 10px 180px;
+        background: linear-gradient(145deg, white, #F2A7C3);
+        font-size: 1rem;
+        border: 0;
+        border-radius: 30px;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0,0,0,.5);
+        box-shadow: inset 0 -2px 10px rgba(0,0,0,.3),
+        0 2px 5px rgba(0,0,0,.3);
+        cursor: pointer;
+    }
+
   }

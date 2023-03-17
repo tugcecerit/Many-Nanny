@@ -42,7 +42,7 @@
     <div class="container"></div>
     <% for(let i=0; i < profile.length; i++) { %>
         <a id="profile-a" href="/home/sitters/<%=profile[i].id%>">
-            <img class="profile" src="<%=profile[i].image%>">
+            <img id="profile-img-index" src="<%=profile[i].image%>">
             <h1 class="profile" id="profile-name"><%=profile[i].name%></h1></a>
             <h3 class="profile" id="profile-age">AGE: <%=profile[i].age%></h3>
             <h3 class="profile" id="profile-location"><%=profile[i].location%></h3>

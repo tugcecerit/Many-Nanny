@@ -56,7 +56,7 @@ router.get('/sitters/seed', async (req, res) => {
     const newProfiles =
       [
         {
-        image: url('https://img.freepik.com/free-photo/happiness-wellbeing-confidence-concept-cheerful-attractive-african-american-woman-curly-haircut-cross-arms-chest-self-assured-powerful-pose-smiling-determined-wear-yellow-sweater_176420-35063.jpg?w=1060&t=st=1678418441~exp=1678419041~hmac=62d73816339b358805687288e0ba8e64f290947bbea1eb8a07fc220a4f98290c'),
+        image: 'https://img.freepik.com/free-photo/happiness-wellbeing-confidence-concept-cheerful-attractive-african-american-woman-curly-haircut-cross-arms-chest-self-assured-powerful-pose-smiling-determined-wear-yellow-sweater_176420-35063.jpg?w=1060&t=st=1678418441~exp=1678419041~hmac=62d73816339b358805687288e0ba8e64f290947bbea1eb8a07fc220a4f98290c',
         name: 'Jessica Bold',
         age: 24,
         location: 'Wallington, NJ',
@@ -129,7 +129,6 @@ router.get('/sitters/seed', async (req, res) => {
 router.post('/sitters', (req, res) => {
     const haveCar = req.body.haveCar === 'on';
     const profileData = {...req.body, haveCar};
-    console.log(req.session)
     Profile.create(profileData, (err, createdProfile) => {
         if (err) {
             console.log(err);
@@ -203,5 +202,6 @@ router.put('/sitters/:id', (req, res) => {
         }
     )
 })
+
 
 module.exports = router
