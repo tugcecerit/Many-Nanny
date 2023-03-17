@@ -1,7 +1,8 @@
 body {
     background-repeat: no-repeat;
     text-align: center;
-    background: white;
+    background-size: cover;
+    background-image: url('/images/background.png');
 }
 
 #freepik_stories-motherhood, #freepik_stories-happy-baby, #freepik_stories-painting-easter-eggs{
@@ -11,10 +12,17 @@ body {
     top: 230px;
 }
 
-#freepik_stories-baby, #freepik_stories-sleeping-baby, #freepik_stories-kids-playing-with-dolls, #freepik_stories-baby-shoes {
+#freepik_stories-baby, #freepik_stories-baby-shoes {
     width: 700px;
     position: absolute;
     right: 200px;
+    top: 200px;
+}
+
+#freepik_stories-sleeping-baby, #freepik_stories-kids-playing-with-dolls {
+    width: 700px;
+    position: absolute;
+    right: 300px;
     top: 200px;
 }
 
@@ -27,8 +35,8 @@ body {
 
 .profile {
     position: relative;
-    left: 300px;
-    width: 400px;
+    left: 200px;
+    width: 600px;
     border-radius: 50%;
 }
 
@@ -36,7 +44,7 @@ body {
     width: 600px;
     position: relative;
     font-size: 20px;
-    left: 1100px;
+    left: 1000px;
     top: 100px;
 }
 
@@ -237,7 +245,7 @@ footer {
     font-family: 'Titan One', cursive;
     color:#F2A7C3;
     font-size: 30px;
-    margin: 20px 150px;
+    margin: 20px 280px;
   }
 
     #profile-age, #profile-location {
@@ -246,7 +254,7 @@ footer {
     font-family: 'Titan One', cursive;
     color:#3C5059;
     font-size: 22px;
-    margin: 20px 150px;
+    margin: 20px 280px;
   }
   #profile-button {
     text-decoration: none;
@@ -268,6 +276,12 @@ footer {
   
   @media only screen and (max-width: 1440px) {
 
+    body {
+        background-repeat: no-repeat;
+        text-align: center;
+        background-image: linear-gradient(#fedde9, white);
+    }
+
     #freepik_stories-motherhood, #freepik_stories-happy-baby, #freepik_stories-painting-easter-eggs{
         width: 500px;
         position: absolute;
@@ -285,7 +299,7 @@ footer {
     #freepik_stories-teddy-bear, #freepik_stories-baby {
         width: 500px;
         position: fixed;
-        right: 100px;
+        right: 120px;
         top: 130px;
     }
     
@@ -293,7 +307,7 @@ footer {
     .profile {
         position: relative;
         left: 300px;
-        width: 300px;
+        width: 400px;
         border-radius: 50%;
     }
     
@@ -311,10 +325,6 @@ footer {
         font-size: 15px;
         left: 850px;
         top: 50px;
-    }
-    
-    .col-7{
-        left: 200px;
     }
     
     .login {
@@ -523,24 +533,23 @@ footer {
         font-family: 'Caveat', cursive;
         color:#F2A7C3;
         font-size: 30px;
-        margin: 20px 0px;
+        margin: 20px 50px;
       }
     
         #profile-age, #profile-location {
-        font-size: 40px;
         text-decoration: none;
         font-family: 'Caveat', cursive;
         color:#3C5059;
         font-size: 22px;
-        margin: 20px 0px;
+        margin: 20px 50px;
       }
       #profile-button {
         text-decoration: none;
-        margin: 20px 280px;
+        margin: 20px 340px;
       }
     
       .top-profile {
-        margin: 40px 180px;
+        margin: 40px 210px;
         font-size: 60px;
         font-family: 'Caveat', cursive;
         color:#3C5059;
@@ -548,11 +557,42 @@ footer {
     
     #profile-p {
         font-size: 20px;
-        margin: 10px 180px;
+        margin: 10px 210px;
     }
     #profile-a:hover {
        text-decoration: none;
        color: #3C5059;
     }
+
+    .profile-spec {
+        font-family: 'Caveat', cursive;
+        font-size: 10px;
+        color:#3C5059;
+        margin: auto;
+      }
+
+      .profile-h1 {
+        font-family: 'Caveat', cursive;
+        width: 700px;
+        font-size: 40px;
+        font-weight: bold;
+        color:#3C5059;
+        margin: 20px 500px;
+      }
+
+      .profile-h3 {
+        font-family: 'Caveat', cursive;
+        width: 700px;
+        font-size: 30px;
+        color:#3C5059;
+        margin: 20px 160px;
+      }
+
+      .profile-img {
+        position: relative;
+        left: 420px;
+        width: 500px;
+        border-radius: 50%;
+        margin: 20px;
+    }
   }
-  

@@ -8,7 +8,6 @@ const Profile = require('./models/sitters.js')
 const profilesController = require('./controllers/sitters.js')
 const session = require('express-session')
 const usersController = require('./controllers/users.js')
-const mongoURI = 'mongodb://localhost:27017/sitters'
 
 const SESSION_SECRET = process.env.SESSION_SECRET
 console.log('Here is the session secret')
@@ -27,7 +26,12 @@ app.set('view engine', 'ejs');
 app.use('/home', profilesController)
 app.use('/users', usersController)
 
-mongoose.connect(process.env.DATABASE_URL)
+const MONGODB_URI = process.env.MONGODB_URI
+mongoose.set('strictQuery', true);
+mongoose.connect(MONGODB_URI, {
+    useNewUrlParser: false,
+});
+
 
 const db = mongoose.connection
 db.on('error', (error) => console.log(error.message + 'is Mongo not running'))
