@@ -44,8 +44,9 @@ router.get('/sitters/contactus', (req, res) => {
 })
 
 router.get('/sitters/contactus/done', (req, res) => {
-    res.send('Your message has been submitted!')
+    res.render('contact-done');
 })
+
 
 router.get('/sitters/new', (req, res) => {
     res.render('new.ejs')

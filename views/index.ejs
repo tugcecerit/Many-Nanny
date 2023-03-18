@@ -39,16 +39,15 @@
     
     <h1 class="top-profile">NANNY PROFILES</h1>
     <p id="profile-p">Find your perfect caregiver for your loved one!</p>
-    <div class="container"></div>
     <% for(let i=0; i < profile.length; i++) { %>
-        <a id="profile-a" href="/home/sitters/<%=profile[i].id%>">
-            <img id="profile-img-index" src="<%=profile[i].image%>">
-            <h1 class="profile" id="profile-name"><%=profile[i].name%></h1></a>
+            <a href="/home/sitters/<%=profile[i].id%>"><img id="profile-img-index" src="<%=profile[i].image%>"></a><br>
+            <button class="back" id="view-profile"><a class="aBack" href="/home/sitters/<%=profile[i].id%>">VIEW PROFILE</a></button><br>
+            <h1 class="profile" id="profile-name"><%=profile[i].name%></h1>
             <h3 class="profile" id="profile-age">AGE: <%=profile[i].age%></h3>
             <h3 class="profile" id="profile-location"><%=profile[i].location%></h3>
     <% } %>
     <button class="back" id="profile-button"><a class="aBack" href="/home">BACK</a></button>
-    </div>
+    
    
 </body>
 <footer class="footer-scroll">
