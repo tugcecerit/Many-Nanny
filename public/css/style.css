@@ -1,11 +1,17 @@
 @media only screen and (min-width: 1440px) {
 
-  body {
+    html, body {
+    margin: 0;
+    padding: 0;
+}
+  
+    body {
     background-repeat: no-repeat;
     text-align: center;
     background-size: cover;
-    background-image: url('/images/background.png');
+    background-image: linear-gradient(#fedde9, white);
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 #freepik_stories-motherhood, #freepik_stories-happy-baby, #freepik_stories-painting-easter-eggs{
@@ -73,11 +79,6 @@
     border-radius: 50%;
   }
 
-  #profile-p {
-    font-size: 20px;
-    margin: 10px 210px;
-  }
-
   #profile-name {
     text-decoration: none;
     font-family: 'Titan One', cursive;
@@ -127,7 +128,7 @@
 
   .top-profile {
     position: relative;
-    padding: 30px;
+    padding: 10px;
     left: 10%;
     font-size: 60px;
     font-family: 'Titan One', cursive;
@@ -137,8 +138,8 @@
 #profile-p {
     font-size: 20px;
     position: relative;
-    padding: 10px;
-    left: 4%;
+    padding: 10px 80px;
+    left: 10%;
 }
 
 .profile {
@@ -305,7 +306,6 @@ input[type=text], input[type=number], input[type=email], input[type=password], s
     padding: 20px 0;
   }
 
-
   .back {
         padding: 15px 40px;
         margin: 10px;
@@ -332,8 +332,9 @@ input[type=text], input[type=number], input[type=email], input[type=password], s
 
 
 footer {
-    position: absolute;
-    bottom: 0px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
     background-color: #f2f2f2;
     padding: 10px;
@@ -341,18 +342,6 @@ footer {
     font-size: 12px;
     color: #999;
   }
-  
-  .footer-scroll {
-    position: relative;
-    bottom: 0px;
-    width: 100%;
-    background-color: #f2f2f2;
-    padding: 10px;
-    text-align: center;
-    font-size: 12px;
-    color: #999;
-  }
-
 
   }
   /* --------------------------------------------------------------------------- */
@@ -364,7 +353,13 @@ footer {
         background-repeat: no-repeat;
         text-align: center;
         background-image: linear-gradient(#fedde9, white);
+        min-height: 100vh;
     }
+
+    html, body {
+        margin: 0;
+        padding: 0;
+      }
 
     #freepik_stories-motherhood, #freepik_stories-happy-baby, #freepik_stories-painting-easter-eggs{
         width: 500px;
@@ -386,7 +381,6 @@ footer {
         right: 120px;
         top: 130px;
     }
-    
     
     .profile {
         position: relative;
@@ -564,42 +558,10 @@ footer {
         color:white;
     }
     
-    
     footer {
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        background-color: #f2f2f2;
-        padding: 10px;
-        text-align: center;
-        font-size: 12px;
-        color: #999;
-      }
-      
-      .footer-scroll {
-        position: relative;
-        bottom: 0px;
-        width: 100%;
-        background-color: #f2f2f2;
-        padding: 10px;
-        text-align: center;
-        font-size: 12px;
-        color: #999;
-      }
-      .media-footer {
-        position: relative;
-        bottom: -950px;
-        width: 100%;
-        background-color: #f2f2f2;
-        padding: 10px;
-        text-align: center;
-        font-size: 12px;
-        color: #999;
-      }
-
-      .footer-scroll {
-        position: relative;
-        bottom: 0px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
         width: 100%;
         background-color: #f2f2f2;
         padding: 10px;
@@ -643,15 +605,19 @@ footer {
       }
     
       .top-profile {
-        margin: 0 12px;
         font-size: 60px;
         font-family: 'Caveat', cursive;
         color:#3C5059;
+        position: relative;
+        padding: 10px;
+        left: 15%;
     }
     
     #profile-p {
-        font-size: 20px;
-        margin: 0 120px;
+        font-size: 21px;
+        padding: 10px;
+        left: 15%;
+        position: relative;
     }
     #profile-a:hover {
        text-decoration: none;
@@ -701,7 +667,7 @@ footer {
     
     .show-button, .show-input input[type=submit] {
         padding: 15px 40px;
-        margin: 10px 10px;
+        margin: 10px 180px;
         background: linear-gradient(145deg, white, #F2A7C3);
         font-size: 1rem;
         border: 0;
