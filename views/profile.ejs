@@ -13,7 +13,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/home"><img id="logo" src="/images/logo2.png"></a>
+        <a class="navbar-brand" href="/"><img id="logo" src="/images/logo2.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,13 +21,13 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="/home/sitters/aboutus">About Us <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/sitters/aboutus">About Us <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/home/sitters">Nanny Profiles</a>
+                <a class="nav-link" href="/sitters">Nanny Profiles</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="/home/sitters/contactus">Contact Us</a>
+                <a class="nav-link disabled" href="/sitters/contactus">Contact Us</a>
               </li>
           </ul>
             <button class="back" type="submit"><a class="aBack" href="/users/signin">LOG IN</a></button>
@@ -53,14 +53,14 @@
     <h3 class="profile-h3">PHONE: <%=profile.phoneNumber%></h3>
     <h3 class="profile-h3">EMAIL: <%=profile.email%></h3>
 </div>
-    <button class="show-button back"><a class="aBack" href="/home/sitters/<%=profile.id%>/edit">EDIT</a></button>
-    <form class="show-input" action="/home/sitters/<%=profile.id%>?_method=DELETE" method="POST">
+    <button class="show-button back"><a class="aBack" href="/sitters/<%=profile.id%>/edit">EDIT</a></button>
+    <form class="show-input" action="/sitters/<%=profile.id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE"/>
     </form>
     <form action="/users/signout" method="POST">
         <button class="show-button back" type="submit">LOG OUT</button>
     </form>
-    <button class="show-button back"><a class="aBack" href="/home/sitters">BACK</a></button>
+    <button class="show-button back"><a class="aBack" href="/sitters">BACK</a></button>
     <br><br><br><br><br>
 </body>
 <footer class="footer-scroll">

@@ -20,7 +20,7 @@ router.post('/register', (req, res) => {
             User.create(req.body, (err, createdUser) => {
                 console.log(createdUser)
                 req.session.currentUser = createdUser
-                res.redirect('/home/sitters/new')
+                res.redirect('/sitters/new')
             })
         }
     })
@@ -38,7 +38,7 @@ router.post('/signin', (req, res) => {
 			const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)
 			if(validLogin) {
 				req.session.currentUser = foundUser
-                res.redirect('/home/sitters/')
+                res.redirect('/sitters/')
 			} else {
 				res.send('Invalid username or password')
 			}
@@ -51,7 +51,7 @@ router.post('/signin', (req, res) => {
 
 router.get('/signout', (req, res) => {
 	req.session.destroy()
-	res.redirect('/home')
+	res.redirect('/')
 })
 
 router.post('/signout', (req, res) => {

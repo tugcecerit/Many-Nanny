@@ -3,7 +3,7 @@
 ## Project Choice
 Nanny App (MANY NANNY)
 
-https://manynanny.herokuapp.com/home
+https://many-nanny.vercel.app/
 
 ## Project Description
 Include: Sometimes it is very difficult to find a perfect nanny for the loved ones. This app will help to match a nanny and a family that is looking for a care.
@@ -49,15 +49,15 @@ Views: index.ejs, show.ejs, new,ejs, edit.ejs - users/register.ejs, signin.ejs (
 
 A list of routes (e.g. POST /pins/ allows users to post a picture of a pin)
 
-- GET/home - Take the user to the home page
-- GET/home/sitters - Take the user to the profiles page
-- GET/home/login - Take the user to sign up or login (stretch goal)
-- GET/home/sitters/new - Display a form to create a new profile
-- POST/home/sitters - Create a new profile
-- GET/home/sitters/:id - Display a single profile
-- GET/home/sitters/:id/edit - Display a form to edit a profile
-- PUT/home/sitters/:id - Update a profile
-- DELETE/home/sitters/:id - Delete the profile
+- GET/ - Take the user to the home page
+- GET/sitters - Take the user to the profiles page
+- GET/login - Take the user to sign up or login (stretch goal)
+- GET/sitters/new - Display a form to create a new profile
+- POST/sitters - Create a new profile
+- GET/sitters/:id - Display a single profile
+- GET/sitters/:id/edit - Display a form to edit a profile
+- PUT/sitters/:id - Update a profile
+- DELETE/sitters/:id - Delete the profile
 
 ## Wireframes
 Wireframes with basic page layouts

@@ -136,7 +136,7 @@ router.post('/sitters', (req, res) => {
             res.send(err);
         }
         console.log(createdProfile);
-        res.redirect('/home/sitters/profile/' + createdProfile.id);
+        res.redirect('/sitters/profile/' + createdProfile.id);
     });
 });
 
@@ -167,7 +167,7 @@ router.delete('/sitters/:id', (req, res) => {
             res.send(err)
         } else {
             console.log(deletedProfile)
-            res.redirect('/home/sitters')
+            res.redirect('/sitters')
         }
     })
 })
@@ -198,7 +198,7 @@ router.put('/sitters/:id', (req, res) => {
                 res.send(err)
             } else {
                 console.log(updatedProfile)
-                res.redirect('/home/sitters/profile/'+req.params.id)
+                res.redirect('/sitters/profile/'+req.params.id)
             }
         }
     )
